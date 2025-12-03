@@ -1,13 +1,14 @@
 # Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning
 
+<img alt="npr-logo" src="assets/npr-logo.pdf">
 
-## Introduction
-We introduce the Native Parallel Reasoner (NPR), a scalable framework for constructing models that intrinsically reason in parallelism. NPR learns adaptive decomposition and aggre- gation policies through a teacher-free pipeline combining self-distilled parallel Supervised Fine-Tuning (SFT) with Native Parallel Reinforcement Learning (RL). This approach allows the model to optimize its own branching strategies directly from experience within a shared computation graph, preserving its native reasoning style while maximizing exploration effi- ciency. Across eight diverse reasoning benchmarks, NPR achieves decisive gains: self-distilled data outperform prior teacher-generated corpora by 10.1, and our Parallel RL stage improves over direct RL baselines by 3.0. Crucially, NPR delivers up to 4.6× inference acceleration over autoregressive baselines and exhibits genuine, non-simulated parallel reasoning behaviors. 
+## Overview
+We introduce the Native Parallel Reasoner (NPR), a scalable framework for constructing models that intrinsically reason in parallelism. NPR learns adaptive decomposition and aggregation policies through a teacher-free pipeline combining self-distilled parallel Supervised Fine-Tuning (SFT) with Native Parallel Reinforcement Learning (RL). This approach allows the model to optimize its own branching strategies directly from experience within a shared computation graph, preserving its native reasoning style while maximizing exploration efficiency. Across eight diverse reasoning benchmarks, NPR achieves decisive gains: self-distilled data outperform prior teacher-generated corpora by 10.1%, and our Parallel RL stage improves over direct RL baselines by 3.0%. Crucially, NPR delivers up to 4.6× inference acceleration over autoregressive baselines and exhibits genuine, non-simulated parallel reasoning behaviors. 
 
 ## Getting Started
 ### Stage 1: NPR-Zero
 
-#### How to install
+#### How to Install
 ```
 cd npr-zero
 conda create -n zero python=3.11
@@ -34,7 +35,7 @@ bash experiments/run.sh
 
 ### Stage 2: NPR-Beta
 
-#### How to install
+#### How to Install
 ```
 cd npr-beta
 conda create -n warmup python=3.11 -y
@@ -67,7 +68,7 @@ Key parameters in `sft_math.sh`:
 
 ### Stage 3: NPR
 
-#### How to install
+#### How to Install
 ```
 cd npr-rl
 conda create -n rl python=3.11
@@ -98,7 +99,7 @@ bash experiments/run.sh
 
 ### Evaluation
 
-#### How to install
+#### How to Install
 ```
 cd eval
 conda create -n eval python=3.10
@@ -151,7 +152,7 @@ Note the `<Model-Path>` is from Stage 3 or download from Huggingface.
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```bash
    git checkout -b your_name/feature-x
-   ```
+   CE```
 4. **Make Your Changes**: Develop and test your changes locally.
 5. **Commit Your Changes**: Commit with a clear message describing your updates.
    ```sh
@@ -167,7 +168,7 @@ Note the `<Model-Path>` is from Stage 3 or download from Huggingface.
 
 ## License
 
-Native-Parallel-Reasoner is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, please refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+Native Parallel Reasoner is protected under the [LICENSE](https://choosealicense.com/licenses/mit). For more details, please refer to the [LICENSE](LICENSE) file.
 
 ## Citation
 ```
