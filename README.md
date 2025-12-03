@@ -181,4 +181,4 @@ xx
 ```
 
 ## Acknowledgment
-This codebase is influenced by these remarkable projects of AI community, including [verl](https://github.com/volcengine/verl?tab=readme-ov-file), [sglang](https://github.com/sgl-project/sglang), [Multiverse](https://github.com/Infini-AI-Lab/Multiverse).
+This codebase is influenced by these remarkable projects of AI community, including [verl](https://github.com/volcengine/verl?tab=readme-ov-file), [sglang](https://github.com/sgl-project/sglang), and [Multiverse](https://github.com/Infini-AI-Lab/Multiverse).
