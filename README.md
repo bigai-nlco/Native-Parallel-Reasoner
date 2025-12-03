@@ -73,7 +73,7 @@ cd npr-rl
 conda create -n rl python=3.11
 conda activate rl
 conda install nvidia::cuda-nvcc
-pip install -e .[sglang]
+pip install -e .
 pip install liger-kernel
 pip uninstall pynvml
 pip install "latex2sympy2-extended[antlr4_9_3]"
@@ -107,12 +107,10 @@ pip install -r requirements.txt
 ```
 
 #### Prepare Datasets and Model
-xxxx
+1. `python convert_to_hf.py verl/experiments/ckpts/project_name/exp_name/global_step_x/actor <STAGE_2_MODEL_PATH> <TARGET_HF_MODEL_PATH>`
 
 #### Scripts
-Modify the `<Model-Path>` to yours.
-
-Note the `<Model-Path>` is from Stage 3 or download from Huggingface. 
+Modify the `<<TARGET_HF_MODEL_PATH>>` to yours.
 ```
 ./scripts/eval.sh \
     --cuda 0,1,2,3,4,5,6,7 \
@@ -121,7 +119,7 @@ Note the `<Model-Path>` is from Stage 3 or download from Huggingface.
     --task "AIME25" \
     --max_eval_samples 30 \
     --eval_batch_size 8 \
-    --model_path <Model-Path> \
+    --model_path <TARGET_HF_MODEL_PATH> \
     --prompt_path prompts/npr.txt \
     --engine parallel \
     --num_samples 1 \
@@ -175,4 +173,4 @@ xx
 ```
 
 ## Acknowledgment
-This codebase is influenced by remarkable projects from the LLM community, including [verl](https://github.com/volcengine/verl?tab=readme-ov-file), [MultiVerse](https://github.com/Infini-AI-Lab/Multiverse) and [sglang](https://github.com/sgl-project/sglang).
+This codebase is influenced by remarkable projects from the LLM community, including [verl](https://github.com/volcengine/verl?tab=readme-ov-file), [Multiverse](https://github.com/Infini-AI-Lab/Multiverse) and [sglang](https://github.com/sgl-project/sglang).
