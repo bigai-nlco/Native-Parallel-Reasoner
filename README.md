@@ -31,9 +31,8 @@ We introduce the Native Parallel Reasoner (NPR), a scalable framework for constr
 
 #### How to Install
 ```
-cd npr-zero
-
 # Create env for NPR-Zero
+cd npr-zero
 conda create -n zero python=3.11
 conda activate zero
 conda install nvidia::cuda-nvcc
@@ -55,6 +54,7 @@ pip install "latex2sympy2-extended[antlr4_9_3]"
 #### Training Scripts
 Modify the `RAY_DATA_HOME` and `MODEL_PATH` to yours.
 ```
+# Run NPR-Zero training
 bash experiments/run.sh
 ```
 
@@ -171,7 +171,7 @@ Modify the `<<TARGET_HF_MODEL_PATH>>` to yours.
     --apply_chat
 ```
 
-#### Results
+#### Official Results of NPR
 We report Pass@1 accuracy averaged over 8 samples for each problem as below.
 
 <img alt="npr-results" src="assets/npr-results.png">
