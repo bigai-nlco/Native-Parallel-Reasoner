@@ -15,7 +15,7 @@
   - [Stage 1: NPR-Zero](#stage-1-npr-zero)
   - [Stage 2: NPR-Beta](#stage-2-npr-beta)
   - [Stage 3: NPR](#stage-3-npr)
-  - [Evaluation](#evaluation)
+  - [Evaluations](#evaluations)
 - [Contributing](#contributing)
 - [License](#license)
 - [Citation](#citation)
@@ -131,7 +131,7 @@ Note the `MODEL_PATH` is from Stage 2.
 bash experiments/run.sh
 ```
 
-### Evaluation
+### Evaluations
 
 #### How to Install
 ```
