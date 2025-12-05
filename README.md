@@ -1,5 +1,7 @@
 # Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning
 
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/xxxx.xxxxx)    [![Project Page](https://img.shields.io/badge/Project%20Page-blue?style=for-the-badge&logo=snowflake&logoColor=white&labelColor=black)](https://bigai-nlco.github.io/native-parallel-reasoner/)    [![Github](https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/bigai-nlco/Native-Parallel-Reasoner)    [![Hugging Face Models](https://img.shields.io/badge/NPR%20Models-fcd022?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/bigai-NPR/models)
+
 <!--<div align="center">-->
   <!--<a href="https://bigai-nlco.github.io/NPR"><img alt="Website" src="https://img.shields.io/badge/🌐%20Website-NPR-pink.svg"/></a>-->
   <!--<a href="https://huggingface.co/bigai-NPR"><img alt="Model" src="https://img.shields.io/badge/🤗%20Hugging%20Face-NPR-orange"/></a>-->
@@ -213,8 +215,13 @@ We report Pass@1 accuracy averaged over 8 samples for each problem as below.
 Native Parallel Reasoner is protected under the [LICENSE](https://choosealicense.com/licenses/mit). For more details, please refer to the [LICENSE](LICENSE) file.
 
 ## Citation
-```
-xx
+```bibtex
+@misc{bigai2025nativeparallelreasoner,
+      title={Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning}, 
+      author={Tong Wu and Yang Liu and Jun Bai and Zixia Jia and Shuyi Zhang and Ziyong Lin and Yanting Wang and Song-Chun Zhu and Zilong Zheng},
+      year={2025},
+      url={https://github.com/bigai-nlco/Native-Parallel-Reasoner/blob/main/pdf/Native-Parallel-Reasoner.pdf},
+}
 ```
 
 ## Acknowledgment
