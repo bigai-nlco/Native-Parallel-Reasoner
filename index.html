@@ -335,7 +335,7 @@
   <div class="container">
     
     <h2 class="title is-2 has-text-centered">
-      🚀 Why should reasoning go wider?
+      🔎 Why Should Reasoning Go Wider?
     </h2>
     <hr>
     
@@ -361,16 +361,51 @@
   </div>
 </section>
 
+<section class="section is-medium hero is-light">
+  <div class="container">
+    
+    <h2 class="title is-2 has-text-centered">
+      📌 TL;DR
+    </h2>
+    <hr>
+    
+    <div class="columns is-centered">
+      <div class="column is-10">
+        
+        <div class="content is-medium" style="text-align: justify;">
+          <p>
+            We introduce <strong>Native Parallel Reasoner (NPR)</strong>, a teacher-free framework that enables Large Language Models (LLMs) to self-evolve genuine parallel reasoning capabilities. 
+            NPR transforms the model from sequential emulation to native parallel cognition through three key innovations: 1) a <strong>self-distilled</strong> progressive training paradigm that 
+            transitions from "cold-start" format discovery to strict topological constraints without external supervision; 2) a novel <strong>Parallel-Aware Policy Optimization (PAPO)</strong> 
+            algorithm that optimizes branching policies directly within the execution graph, allowing the model to learn adaptive decomposition via trial and error; and 3) a robust <strong>NPR Engine</strong> 
+            that refactors memory management and flow control of SGLang to enable stable, large-scale parallel RL training. Across eight reasoning benchmarks, NPR trained on Qwen3-4B achieves performance gains 
+            of up to 24.5% and inference speedups up to 4.6x. Unlike prior baselines that often fall back to autoregressive decoding, NPR demonstrates 100% genuine parallel execution, establishing a new standard 
+            for self-evolving, efficient, and scalable agentic reasoning.
+          </p>
+          
+        </div>
+        <figure class="image is-centered">
+          <img src="assets/images/teaser.png" alt="NPR Overview" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+          <figcaption class="has-text-centered is-size-6 mt-2">
+            Figure 1：Native Parallel Reasoner (NPR) transforms a base model from sequential chain-of-thought (CoT) to native parallel reasoning via a self-distilled progressive training paradigm. 
+            Compared with previous SoTA, NPR achieves high reasoning accuracy, genuine parallelism and token acceleration. The illustrated results are evaluated on the AIME25 benchmark.
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
             We introduce <strong>Native Parallel Reasoner (NPR)</strong>, a teacher-free framework that enables Large Language Models (LLMs) to self-evolve genuine parallel reasoning capabilities. 
             NPR transforms the model from sequential emulation to native parallel cognition through three key innovations: 1) a <strong>self-distilled</strong> progressive training paradigm that 
@@ -384,7 +419,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End paper abstract -->
 
 <section class="section hero">
@@ -395,16 +430,16 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            NPR adpots a three-stage curriculum, as illustrated in <strong>Figure 1</strong>, to progressively induce, ground, and amplify this capability: 
+            NPR adpots a three-stage curriculum, as illustrated in <strong>Figure 2</strong>, to progressively induce, ground, and amplify this capability: 
             (1) <strong>NPR-ZERO</strong>, which utilizes reinforcement learning to induce a parallel formatting schema without external supervision; 
             (2) <strong>NPR-BETA</strong>, which stabilizes the model's parallel primitives through supervised fine-tuning on self-distilled data; and 
             (3) <strong>NPR</strong>, which employs a novel parallel-aware RL (PAPO) algorithm to robustly optimize the native parallel reasoning performance. 
           </p>
         </div>
         <figure class="image is-centered">
-          <img src="assets/images/overview.jpg" alt="板块描述图片" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+          <img src="assets/images/npr-overview.png" alt="NPR Overview" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
           <figcaption class="has-text-centered is-size-6 mt-2">
-            Figure 1：An overview of the NPR training framework.
+            Figure 2：An overview of the NPR training framework.
           </figcaption>
         </figure>
       </div>
@@ -420,7 +455,7 @@
         <h2 class="title is-3">✨ Parallel-Aware Policy Optimization (PAPO)</h2>
         <div class="content has-text-justified">
           <p>
-            Parallel-Aware Policy Optimization (PAPO) (<strong>Figure 2</strong>) effectively leverages RL to enhance parallel reasoning, leading to more generalized agentic behavior.
+            Parallel-Aware Policy Optimization (PAPO) (<strong>Figure 3</strong>) effectively leverages RL to enhance parallel reasoning, leading to more generalized agentic behavior.
             It builds on the SFT foundation with four key modifications to stabilize training and enforce parallel semantics:
           </p>
 
@@ -440,9 +475,9 @@
           </ol>
         </div>
         <figure class="image is-centered">
-          <img src="assets/images/PAPO.jpg" alt="板块描述图片" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+          <img src="assets/images/PAPO.png" alt="PAPO" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
           <figcaption class="has-text-centered is-size-6 mt-2">
-            Figure 2：Comparison of GRPO-style RL and Parallel-Aware Policy Optimization (PAPO).
+            Figure 3：Comparison of GRPO-style RL and Parallel-Aware Policy Optimization (PAPO).
           </figcaption>
         </figure>
       </div>
@@ -492,7 +527,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">🔥 Stable Parallel Reasoning Triggering</h2>
+        <h2 class="title is-3 has-text-centered">🛡️ Stable Parallel Reasoning Triggering</h2>
         <div class="content has-text-justified">
     
     <p> We compare the parallel reasoning trigger rate between our NPR model and the Multiverse baseline (See <strong>Table 2</strong>). This rate measures a model's propensity to generate simultaneous, non-sequential thought structures during problem-solving. </p>
@@ -524,7 +559,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">🔥 Extreme Inference Acceleration</h2>
+        <h2 class="title is-3 has-text-centered">🚀 Extreme Inference Acceleration</h2>
         <div class="content has-text-justified">
     
     <p> We evaluate token throughput and acceleration rate against Multiverse and autoregressive (AR) baselines. As shown in <strong>Table 3</strong>, NPR consistently achieves the strongest efficiency and substantial speedups: </p>
@@ -564,10 +599,11 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{nlco2025npr,
+      <pre id="bibtex-code"><code>@misc{bigai2025nativeparallelreasoner,
       title={Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning}, 
       author={Tong Wu and Yang Liu and Jun Bai and Zixia Jia and Shuyi Zhang and Ziyong Lin and Yanting Wang and Song-Chun Zhu and Zilong Zheng},
       year={2025},
+      url={https://github.com/bigai-nlco/Native-Parallel-Reasoner/blob/main/pdf/Native-Parallel-Reasoner.pdf},
 }</code></pre>
     </div>
 </section>
