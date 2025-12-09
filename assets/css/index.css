@@ -148,7 +148,7 @@ body {
 .publication-authors {
     font-family: 'Inter', sans-serif !important;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .publication-venue {
@@ -254,14 +254,17 @@ body {
 }
 
 .results-carousel {
+  width: 85%;       /* 宽度占父容器 80%，可调整 */
+  height: auto;     /* 高度自动，根据内容比例调整 */
+  margin: 0 auto;   /* 居中 */
   overflow: hidden;
-  padding: 1rem 0;
+  padding: 0.25rem 0;
 }
 
 .results-carousel .item {
   margin: 1rem;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 0.5rem;
   font-size: 0;
   background: var(--background-primary);
   border-radius: var(--border-radius-lg);
@@ -687,7 +690,7 @@ code {
   
   .link-block {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
   
   .button {

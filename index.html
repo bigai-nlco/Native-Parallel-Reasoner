@@ -224,11 +224,12 @@
   <main id="main-content">
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container is-fluid">
+      <!-- <div class="container is-max-desktop"> -->
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning</h1>
+            <h1 class="title is-1 publication-title">Native Parallel Reasoner: Reasoning in Parallelism<br> via Self-Distilled Reinforcement Learning</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
                   <span class="author-block">
@@ -250,6 +251,7 @@
                   <span class="author-block">
                     <a href="https://github.com/NoaneWang" target="_blank">Yanting Wang</a>,
                   </span>
+                  <br>
                   <span class="author-block">
                     <a href="https://zhusongchun.net" target="_blank">Song-Chun Zhu</a>,
                   </span>
@@ -264,14 +266,14 @@
                     <!-- TODO: Remove this line if no equal contribution -->
                     <span class="eql-cntrb"><small><br><sup>*</sup>Core Contributors</small></span>
                     <span class="eql-cntrb"><small>&nbsp;&nbsp;<sup>&#8224;</sup>Project Leaders</small></span>
-                    <span class="eql-cntrb"><small>&nbsp;&nbsp;<sup>&#9993;</sup>Corresponding Author</small></span>
+                    <span class="eql-cntrb"><small>&nbsp;&nbsp;<sup>&#9993;</sup>Correspondence to: zlzheng(at)bigai.ai</small></span>
                   </div>
 
                   <div class="column has-text-centered">
 
                   <!-- TODO: Update with your arXiv paper ID -->
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    <a href="https://arxiv.org/pdf/2512.07461" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -309,26 +311,87 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <h2 class="title is-2 has-text-centered">
       🎬 Demo
     </h2>
     <hr>
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
         <source src="assets/videos/case1.mp4" type="video/mp4">
       </video>
-      <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
         NPR demonstrates its parallel reasoning process on a complex problem, showcasing its ability to decompose tasks and aggregate solutions efficiently.
       </h2>
     </div>
   </div>
+</section> -->
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-2 has-text-centered",  style="margin-bottom: 0.25rem;">
+      🎬 Demo
+      </h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <!-- TODO: Add poster image for better preview -->
+          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+            <!-- Your video file here -->
+            <source src="assets/videos/case1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- <div class="item item-video2">
+          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+            <source src="assets/videos/case1.mp4" type="video/mp4">
+          </video>
+        </div> -->
+      </div>
+      <h2 class="subtitle has-text-centered">
+        NPR demonstrates its parallel reasoning process on a complex problem, showcasing its ability to<br> decompose tasks and aggregate solutions efficiently.
+      </h2>
+    </div>
+  </div>
 </section>
 <!-- End teaser video -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize carousel (disable autoScroll!)
+  var carousels = bulmaCarousel.attach('#results-carousel', {
+    autoplay: false,
+    pauseOnHover: false,
+    navigation: true
+  });
+
+  // Get carousel instance
+  var carousel = carousels[0];
+
+  // Grab all videos
+  const videos = document.querySelectorAll("#results-carousel video");
+
+  // For each video, bind "ended" event
+  videos.forEach((video, index) => {
+    video.addEventListener("ended", () => {
+      // Move to next slide when the current video ends
+      carousel.next();
+      
+      // Find next video's DOM element
+      const nextIndex = (index + 1) % videos.length;
+      const nextVideo = videos[nextIndex];
+
+      // Wait a moment (carousel transition), then play next
+      setTimeout(() => {
+        nextVideo.play();
+      }, 300); // depends on your carousel transition duration
+    });
+  });
+
+  // Auto-play the first video when page loads
+  videos[0].play();
+});
+</script>
 
 
 <section class="section is-medium">
@@ -599,33 +662,35 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@misc{bigai2025nativeparallelreasoner,
+      <pre id="bibtex-code"><code>@misc{nativeparallelreasonerreasoning,
       title={Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning}, 
       author={Tong Wu and Yang Liu and Jun Bai and Zixia Jia and Shuyi Zhang and Ziyong Lin and Yanting Wang and Song-Chun Zhu and Zilong Zheng},
       year={2025},
-      url={https://github.com/bigai-nlco/Native-Parallel-Reasoner/blob/main/pdf/Native-Parallel-Reasoner.pdf},
+      eprint={2512.07461},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2512.07461}, 
 }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
 
 
-<!-- <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
 
           <p>
-            <strong>Acknowledgements</strong><br>
-            xxxxxxxxxx
+            © 2025 <a href="https://github.com/bigai-nlco" target="_blank">BIGAI NLCo Lab</a>. All rights reserved. Website template credit to <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
           </p>
 
         </div>
       </div>
     </div>
   </div>
-</footer> -->
+</footer>
 
 <!-- Statcounter tracking code -->
   
