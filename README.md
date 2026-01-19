@@ -109,12 +109,13 @@ conda install nvidia::cuda-nvcc
 # Install dependencies
 pip install -e .
 pip install liger-kernel
-pip uninstall pynvml
 pip install "latex2sympy2-extended[antlr4_9_3]"
 cd verl/workers/rollout/sglang_rollout/sglang/python
-pip install -e .
+pip install -e .[all]
+pip install transformers --upgrade
 pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
 pip install fire
+pip uninstall pynvml
 ```
 
 #### Prepare Datasets and Model
@@ -134,6 +135,7 @@ bash experiments/run.sh
 ### Evaluations
 
 #### How to Install
+For AR:
 ```
 # Create env for evaluations
 cd evals
@@ -143,6 +145,16 @@ conda activate eval
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+For NPR:
+```
+# Inheriting the environment of the third stage.
+
+conda activate rl
+
+pip install word2number rich latex2sympy2==1.9.1
+```
+
 
 #### Prepare Datasets and Model
 1. `python convert_to_hf.py verl/experiments/ckpts/project_name/exp_name/global_step_x/actor <STAGE_2_MODEL_PATH> <TARGET_HF_MODEL_PATH>`
