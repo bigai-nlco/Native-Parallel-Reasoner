@@ -2,7 +2,7 @@
 
 # Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning
 
-[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/xxxx.xxxxx)    [![Project Page](https://img.shields.io/badge/Project%20Page-blue?style=for-the-badge&logo=snowflake&logoColor=white&labelColor=black)](https://bigai-nlco.github.io/Native-Parallel-Reasoner/)    [![Github](https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/bigai-nlco/Native-Parallel-Reasoner)    [![Hugging Face Models](https://img.shields.io/badge/NPR%20Models-fcd022?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/bigai-NPR/models)
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.07461)    [![Project Page](https://img.shields.io/badge/Project%20Page-blue?style=for-the-badge&logo=snowflake&logoColor=white&labelColor=black)](https://bigai-nlco.github.io/Native-Parallel-Reasoner/)    [![Github](https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/bigai-nlco/Native-Parallel-Reasoner)    [![Hugging Face Models](https://img.shields.io/badge/NPR%20Models-fcd022?style=for-the-badge&logo=huggingface&logoColor=000)](https://huggingface.co/bigai-NPR/models)
 
 
 <img alt="npr-poster" src="assets/NPR-poster.png">
