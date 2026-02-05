@@ -104,15 +104,16 @@ Key parameters in `sft_math.sh`:
 cd npr-rl
 conda create -n rl python=3.11
 conda activate rl
-conda install nvidia::cuda-nvcc
+conda install -c nvidia cuda-nvcc=12.8
 
 # Install dependencies
+cd npr-rl
 pip install -e .
 pip install liger-kernel
 pip install "latex2sympy2-extended[antlr4_9_3]"
 cd verl/workers/rollout/sglang_rollout/sglang/python
 pip install -e .[all]
-pip install transformers --upgrade
+pip install transformers==4.53.1
 pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
 pip install fire
 pip uninstall pynvml
