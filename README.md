@@ -227,14 +227,13 @@ Native Parallel Reasoner is protected under the [LICENSE](https://choosealicense
 
 ## Citation
 ```bibtex
-@misc{nativeparallelreasonerreasoning,
-      title={Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning}, 
-      author={Tong Wu and Yang Liu and Jun Bai and Zixia Jia and Shuyi Zhang and Ziyong Lin and Yanting Wang and Song-Chun Zhu and Zilong Zheng},
-      year={2025},
-      eprint={2512.07461},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2512.07461}, 
+@inproceedings{
+    wu2026native,
+    title={Native Parallel Reasoner: Reasoning in Parallelism via Self-Distilled Reinforcement Learning},
+    author={Tong Wu and Yang Liu and Jun Bai and Zixia Jia and Shuyi Zhang and Ziyong Lin and Yanting Wang and Song-Chun Zhu and Zilong Zheng},
+    booktitle={Forty-third International Conference on Machine Learning},
+    year={2026},
+    url={https://openreview.net/forum?id=tyqW6SYxWB}
 }
 ```
 
